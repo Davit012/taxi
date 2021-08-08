@@ -129,7 +129,6 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group dates-wrap">
-                            <%--                            <input id="time" class="dates form-control" placeholder="Time" type="time" name = "time">--%>
                             <label for="appt">Choose a time for your meeting:</label>
 
                             <input type="time" id="appt" name="time"

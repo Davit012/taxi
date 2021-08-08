@@ -14,17 +14,13 @@ public class CarsManager {
     public void orderingCar(Orders order) {
         OrderManager orderManager = new OrderManager();
         String sql = "SELECT * from cars";
-        int minOrdersDriver = 0;
-
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
-            boolean result = false;
             while (resultSet.next()) {
                 int orderCount = resultSet.getInt(4);
                 if (orderCount == 0) {
                     orderManager.addOrder(order,resultSet.getInt(1));
-
                     return;
                 }
             }

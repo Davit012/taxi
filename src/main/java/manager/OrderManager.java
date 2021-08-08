@@ -45,8 +45,6 @@ public class OrderManager {
 
 
     public void checkDriver(int id, Orders order) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        SimpleDateFormat format = new SimpleDateFormat("HH:mm");
         CarsManager carsManager = new CarsManager();
         String query = "SELECT * FROM orders WHERE driver_id = " + id;
 
